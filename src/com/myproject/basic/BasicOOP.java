@@ -1,6 +1,7 @@
 package com.myproject.basic;
 
 import com.myproject.basic.oop.Entity;
+import com.myproject.basic.oop.Options;
 
 import java.util.Arrays;
 
@@ -25,6 +26,7 @@ public class BasicOOP implements Demo {
         }
         print(entityWater);
         print(redefEnt);
+        print("Options: ", Options.userName, ",", Options.textColor);
     }
 
     public static void printEntity(Entity entity){

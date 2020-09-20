@@ -2,7 +2,7 @@ package com.myproject.basic;
 
 import static com.myproject.basic.Main.print;
 
-public class Inheritance implements Demo {
+public final class Inheritance implements Demo {
     public void test(){
         Admin vova = new Admin("Vova Vovochkin", 1);
         print(vova);
@@ -80,4 +80,10 @@ class Admin extends BaseUser {
         this.accessLevel = accessLevel;
         extInfo = String.format("lvl=%d", accessLevel);
     }
+
+    final public int getAccessLevel(){
+        return accessLevel;
+    }
 }
+
+
