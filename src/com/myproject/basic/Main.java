@@ -47,14 +47,16 @@ public class Main {
         // Functions
         test(new Functions());
 
+        // Annotations
+        test(new AnnotationsDemo());
+
         // Input-Output Streams
         test(new IOStreamDemo());
 
         // Threads
-        test(new ThreadDemo());
+//        test(new ThreadDemo());
 
-        // Annotations
-        test(new AnnotationsDemo());
+
     }
 
     public static void test(Demo demo){
