@@ -17,20 +17,19 @@ import com.myproject.basic.sub_manyitems.*;
 import static com.myproject.basic.Main.*;
 
 
-public class Importing {
+public class Importing implements Demo {
 
-    void importing(){
-        hr();
+    public void test(){
         List<Object> items;
         items = Arrays.asList(new SubItem(), new Sub2Item(), new Sub1(), new Sub2(), new Sub3(), new Sub3());
         for(Object item : items){
             printInfo(item);
         }
-
+        innerClasses();
     }
 
     public void innerClasses(){
-        print(repeat("-", 20));
+        hr(20);
 
         InnerClasses innerClasses = new InnerClasses();
         innerClasses.test();

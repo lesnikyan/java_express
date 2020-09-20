@@ -5,10 +5,15 @@ import java.util.Random;
 
 import static com.myproject.basic.Main.*;
 
-public class BasicSyntax {
-    public static void test(){
+/**
+ * Class docs
+ */
+public class BasicSyntax implements Demo {
 
-        hr();
+    /**
+     * Method docs
+     */
+    public void test(){
 
         boolean isAllGood = true;
         boolean isAllBad = false;

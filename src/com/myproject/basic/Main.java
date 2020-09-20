@@ -18,45 +18,51 @@ import java.util.List;
  */
 public class Main {
 
-    /**
-     *
-     * @param args
-     */
     public static void main(String[] args) {
-	    // Application starting from here.
 
         // Import
-        Importing importing = new Importing();
-        importing.importing();
-        importing.innerClasses();
+        test(new Importing());
 
         // Syntax
-        BasicSyntax.test();
+        test(new BasicSyntax());
 
         // Methods
-        new Methods().test();
+        test(new Methods());
+
+        // Basic OOP
+        test(new BasicOOP());
 
         // OOP Inheritance
-        hr(40);
-        new BasicOOP().test();
-        hr(40);
-        new Inheritance().test();
+        test(new Inheritance());
 
         // Generic
-        hr(40);
-        new Generics().test();
+        test(new Generics());
 
         // Exceptions
-        hr(40);
-        new Exceptions().test();
+        test(new Exceptions());
 
         // Collections, Strings
+        test(new CollectionsDemo());
+
+        // Functions
+        test(new Functions());
+
+        // Input-Output Streams
+        test(new IOStreamDemo());
 
         // Threads
+        test(new ThreadDemo());
 
         // Annotations
-
+        test(new AnnotationsDemo());
     }
+
+    public static void test(Demo demo){
+        hr(40);
+        print(" - - Demo of ", demo.getClass().getSimpleName(), " - -");
+        demo.test();
+    }
+
     /**
      *
      * @param item
@@ -65,12 +71,12 @@ public class Main {
         print(item.getClass().getName());
     }
 
-    public static void print(int[] arg){
-        System.out.println(Arrays.toString(arg));
-    }
-
     public static void print(Printable arg){
         arg.print();
+    }
+
+    public static void print(int[] arg){
+        System.out.println(Arrays.toString(arg));
     }
 
     public static void print(Object... x){

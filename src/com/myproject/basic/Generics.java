@@ -4,10 +4,15 @@ import com.myproject.basic.oop.BiPoint;
 import com.myproject.basic.oop.Point;
 
 import static com.myproject.basic.Main.print;
-import static com.myproject.basic.Main.hr;
 
-public class Generics {
+public class Generics implements Demo {
     public void test(){
+        // Unfolding
+        Integer x = new Integer(1);
+        Integer x2 = 2;
+        int x3  = new Integer(3);
+
+        // Custom generics
         Point<Integer> intPoint = new Point(5, 10);
         print(intPoint);
 

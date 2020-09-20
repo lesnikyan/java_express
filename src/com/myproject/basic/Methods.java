@@ -7,7 +7,7 @@ import java.util.List;
 
 import static com.myproject.basic.Main.*;
 
-public class Methods {
+public class Methods implements Demo {
 
     public void test(){
         printNumbers(new int[]{11, 22, 33});

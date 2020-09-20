@@ -2,7 +2,7 @@ package com.myproject.basic;
 
 import static com.myproject.basic.Main.print;
 
-public class Inheritance {
+public class Inheritance implements Demo {
     public void test(){
         Admin vova = new Admin("Vova Vovochkin", 1);
         print(vova);
