@@ -3,8 +3,10 @@ package com.myproject.basic;
 // import section
 
 // -- standard lib
-import java.util.Arrays;
+// import java.lang.*; // available by default
+import java.util.Arrays; // java.* - std lib
 import java.util.List;
+import javax.xml.xpath.XPath; // new java packages
 
 // inner project import
 import com.myproject.basic.subpack1.SubItem;

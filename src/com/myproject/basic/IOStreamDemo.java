@@ -26,9 +26,9 @@ public class IOStreamDemo implements Demo {
 //        testConsoleInput();
 
         // Read network
-//        print(" - Load http data - ");
-//        List<String> pageContent = loadUrlContent("http://date.jsontest.com/");
-//        pageContent.forEach(s -> print(s));
+        print(" - Load http data - ");
+        List<String> pageContent = loadUrlContent("http://date.jsontest.com/");
+        pageContent.forEach(s -> print(s));
 
         // Read-write file
 
