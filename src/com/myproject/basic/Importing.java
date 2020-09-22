@@ -22,8 +22,15 @@ import static com.myproject.basic.Main.*;
 public class Importing implements Demo {
 
     public void test(){
+        // imported class from javax
+        XPath xpath = null;
+
         List<Object> items;
-        items = Arrays.asList(new SubItem(), new Sub2Item(), new Sub1(), new Sub2(), new Sub3(), new Sub3());
+        // imported from sub-packages
+        items = Arrays.asList(
+                new SubItem(), new Sub2Item(), new Sub1(),
+                new Sub2(), new Sub3(), new Sub3());
+
         for(Object item : items){
             printInfo(item);
         }
@@ -35,6 +42,8 @@ public class Importing implements Demo {
 
         InnerClasses innerClasses = new InnerClasses();
         innerClasses.test();
+
+        InnerClasses.StatInClass statInner = new InnerClasses.StatInClass();
 
         // Can use non-public class from same package,
         // but can't define two classes with same name in different files.

@@ -38,6 +38,8 @@ public class BasicSyntax implements Demo {
         double d2 = .5; // 0.5
         double d3 = (double) 1.2f;
 
+        // Objects
+        Object object = null;
 
         // Arrays
 
@@ -50,7 +52,7 @@ public class BasicSyntax implements Demo {
 
         String[][] nameMatrix = {
                 {"Vasya", "Vova", "Goga"},
-                {"Olya", "Yula", "Lyolya"}
+                {"Olya", "Yula"}
         };
         for(String[] names : nameMatrix){
             for(String name : names){
@@ -74,6 +76,8 @@ public class BasicSyntax implements Demo {
             rnums[i] = 100 + rnd.nextInt(99);
         }
 
+        //boolean zzz = 1 == false;
+
         for(int n : rnums){
             if((n & 1) != 0){
                 print("-odd: " + n);
@@ -89,10 +93,14 @@ public class BasicSyntax implements Demo {
                 new Item(3, "ccc"),
                 new Item(5, "Spartaaa")
         };
+
         for(Item item : items){
             switch(item.getId()){
-                case 1: print("First item: " + item.getName());
+                case 0:
+                case 1: {
+                    print("First item: " + item.getName());
                     break;
+                }
                 case 2: print("Second item: " + item.getName());
                     break;
                 case 3: print("Third item: " + item.getName());

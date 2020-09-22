@@ -9,7 +9,13 @@ import static com.myproject.basic.Main.print;
 import static com.myproject.basic.Main.hr;
 
 public class BasicOOP implements Demo {
+
     public void test(){
+
+        Object obj = new Object();
+        Class classVal = obj.getClass();
+
+
         Entity defEnt = new Entity();
         Entity entityFire = new Entity("Red-Fire");
         Entity entityFire2 = new Entity("Blue-Fire", new String[]{"Temperature-10000"});

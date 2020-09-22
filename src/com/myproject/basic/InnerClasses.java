@@ -30,6 +30,10 @@ public class InnerClasses {
     class InClassItem implements InfoItem{
         // Class is defined in the class.
     }
+
+    public static class StatInClass implements InfoItem {
+        // static inner class
+    }
 }
 
 class NearItem implements InfoItem {

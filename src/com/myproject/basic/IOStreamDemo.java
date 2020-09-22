@@ -1,6 +1,7 @@
 package com.myproject.basic;
 
 //import com.myproject.basic.oop.EntOption;
+import com.google.gson.Gson;
 import com.myproject.basic.oop.SerialisedEntity;
 import com.sun.corba.se.impl.orbutil.ObjectWriter;
 
@@ -66,6 +67,20 @@ public class IOStreamDemo implements Demo {
 
         // Gson
 
+
+        Gson gson = new Gson();
+
+        GoodsItem shoes = new GoodsItem(111, "Red shoes", 28.5);
+        print("Shoes info:", shoes.toString());
+        String jsonVal = gson.toJson(shoes);
+        print("Origin Json:", jsonVal);
+        jsonVal = jsonVal.replace("Red", "Dark-Green");
+        print("Edited Json:", jsonVal);
+
+
+        GoodsItem objVal = gson.fromJson(jsonVal, GoodsItem.class);
+        print("Item info:", objVal.toString());
+
     }
 
     public void testConsoleInput(){
@@ -121,5 +136,21 @@ public class IOStreamDemo implements Demo {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+}
+
+class GoodsItem {
+    private int id;
+    private String name;
+    private double size;
+
+    public GoodsItem(int id, String name, double size){
+        this.id = id;
+        this.name = name;
+        this.size = size;
+    }
+
+    public String toString(){
+        return String.format("GoodsItem(%d, %s, %f)", id, name, size);
     }
 }
