@@ -1,5 +1,7 @@
 package com.myproject.basic;
 
+import com.myproject.basic.oop.InfoItem;
+
 import static com.myproject.basic.Main.printInfo;
 import static com.myproject.basic.Main.print;
 

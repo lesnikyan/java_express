@@ -33,11 +33,27 @@ public class CollectionsDemo implements Demo {
 
         // Set: unique values, no order
         Set<Integer> idList = new HashSet<>();
-        idList.addAll(Arrays.asList(111, 222, 333, 444));
+        idList.addAll(Arrays.asList(111, 222, 333, 444, 222, 111));
         print("Set, values:");
         print(idList.toArray());
         // Set: HashSet, TreeSet
 
+        // Dequeue ("double ended queue")
+        Deque<String> commands = new LinkedList<>();
+        commands.push("comm-1");
+        commands.push("comm-2");
+        commands.push("comm-3");
+        Deque<String> copyComm = new ArrayDeque<>(commands);
+
+        // pop
+        while(! commands.isEmpty()) {
+            print(commands.pop());
+        }
+        // poll
+        print("Copy size:", copyComm.size());
+        while(! copyComm.isEmpty()) {
+            print(copyComm.pollLast());
+        }
 
     }
 }

@@ -2,7 +2,9 @@ package com.myproject.basic;
 
 import com.myproject.basic.oop.Entity;
 import com.myproject.basic.oop.Options;
+import com.myproject.basic.oop.SimpleObject;
 
+import java.lang.reflect.Type;
 import java.util.Arrays;
 
 import static com.myproject.basic.Main.print;
@@ -14,7 +16,10 @@ public class BasicOOP implements Demo {
 
         Object obj = new Object();
         Class classVal = obj.getClass();
+        Type t;
 
+        SimpleObject so = new SimpleObject("Im Groot");
+        SimpleObject so2 = new SimpleObject("Rembo");
 
         Entity defEnt = new Entity();
         Entity entityFire = new Entity("Red-Fire");

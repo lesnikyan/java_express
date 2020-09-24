@@ -1,4 +1,4 @@
-package com.myproject.basic;
+package com.myproject.basic.oop;
 
 public interface InfoItem extends InfoPrintable {
    default String info(){

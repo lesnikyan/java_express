@@ -3,6 +3,7 @@ package com.myproject.basic;
 import static com.myproject.basic.Main.print;
 
 public final class Inheritance implements Demo {
+
     public void test(){
         Admin vova = new Admin("Vova Vovochkin", 1);
         print(vova);
@@ -16,6 +17,12 @@ public final class Inheritance implements Demo {
             }
         };
         print(customGrom);
+        Printable pp = new Printable() {
+            @Override
+            public void print() {
+                System.out.println("Hello!!!");
+            }
+        };
     }
 }
 

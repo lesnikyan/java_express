@@ -23,7 +23,7 @@ public class Entity {
     public static final int versionId = 101;
 
     // Non-static fields
-    private String name = defaultName;
+    private String name; // = defaultName;
 
     private String[] options = new String[]{"Init"};
 
@@ -75,8 +75,9 @@ public class Entity {
         }
     }
 
+    @Override
     public String toString(){
-        return String.format("Point(%s, %s)", name,
+        return String.format("%s(%s, %s)", getClass().getSimpleName(), name,
                 Arrays.toString(Arrays.stream(options).map(
                         s -> String.format("\"%s\"", s)).toArray()));
     }
