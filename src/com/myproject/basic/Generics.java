@@ -12,10 +12,25 @@ import static com.myproject.basic.Main.print;
 
 public class Generics implements Demo {
     public void test(){
-        // Unfolding
+        // Unboxing
         Integer x = new Integer(1);
         Integer x2 = 2;
         int x3  = new Integer(3);
+
+        // Simplest example
+        TVal<Integer> tvInt = new TVal<Integer>();
+        tvInt.val = (int) 10;
+        double ddd = tvInt.val.doubleValue();
+
+        TVal<Double> tvDub = new TVal<>();
+        tvDub.val = 20.005;
+
+        TVal<String> tvStr = new TVal<>();
+        tvStr.val = "by String value";
+        tvStr.val.replace("a", "A");
+
+        TVal<String[]> tvStrArr = new TVal<>();
+        tvStrArr.val = new String[]{"One", "Two", "Three"};
 
         // Custom generics
         Point<Integer> intPoint = new Point(5, 10);
@@ -28,6 +43,10 @@ public class Generics implements Demo {
     }
 }
 
+
+class TVal<T>{
+    public T val;
+}
 
 class OneGen<T> {
     T arg;

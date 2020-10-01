@@ -1,5 +1,6 @@
 package com.myproject.basic.oop;
 
+import java.io.Externalizable;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,4 +46,6 @@ public class SerialisedEntity implements Serializable {
         }
     }
 }
+
+// see Externalizable
 

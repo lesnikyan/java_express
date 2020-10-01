@@ -1,6 +1,6 @@
 package com.myproject.basic;
 
-//import com.myproject.basic.oop.EntOption;
+
 import com.google.gson.Gson;
 import com.myproject.basic.oop.SerialisedEntity;
 import com.sun.corba.se.impl.orbutil.ObjectWriter;
@@ -23,17 +23,18 @@ import java.util.Scanner;
 public class IOStreamDemo implements Demo {
     @Override
     public void test() {
-        // Read console
-//        testConsoleInput();
-
-        // Read network
-        print(" - Load http data - ");
-        List<String> pageContent = loadUrlContent("http://date.jsontest.com/");
-        pageContent.forEach(s -> print(s));
-
-        // Read-write file
 
         try {
+            // Read console
+//            testConsoleInput();
+
+            // Read network
+            print(" - Load http data - ");
+            List<String> pageContent = loadUrlContent("http://date.jsontest.com/");
+            pageContent.forEach(s -> print(s));
+
+            // Read-write file
+
             String tmpDirStr = "C:\\Users\\slisn\\tmp";
             Path dirPath = Paths.get(tmpDirStr);
             if(! Files.isDirectory(dirPath)) {
@@ -66,8 +67,6 @@ public class IOStreamDemo implements Demo {
         }
 
         // Gson
-
-
         Gson gson = new Gson();
 
         GoodsItem shoes = new GoodsItem(111, "Red shoes", 28.5);
@@ -76,7 +75,6 @@ public class IOStreamDemo implements Demo {
         print("Origin Json:", jsonVal);
         jsonVal = jsonVal.replace("Red", "Dark-Green");
         print("Edited Json:", jsonVal);
-
 
         GoodsItem objVal = gson.fromJson(jsonVal, GoodsItem.class);
         print("Item info:", objVal.toString());
@@ -100,7 +98,9 @@ public class IOStreamDemo implements Demo {
             // InputStream conn.getInputStream() - read bytes
             // InputStreamReader - read chars
             // BufferedReader   - read lines or make stream
-            try(BufferedReader respReader = new BufferedReader(new InputStreamReader(conn.getInputStream()))){
+            try(BufferedReader respReader = new BufferedReader(
+                    new InputStreamReader(
+                            conn.getInputStream()))){
                 String line;
                 while((line = respReader.readLine()) != null){
                     content.add(line);
@@ -137,6 +137,8 @@ public class IOStreamDemo implements Demo {
             e.printStackTrace();
         }
     }
+
+
 }
 
 class GoodsItem {

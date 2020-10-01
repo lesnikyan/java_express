@@ -32,6 +32,9 @@ public class Exceptions implements Demo {
         testRepeated("black.", 44);
         testRepeated("black.", 1000000);
 
+        // wait logs
+        new SafelySleep(){}.sleep(1000);
+
     }
 
     public void numDiv(int... nums) throws ArithmeticException {
@@ -50,7 +53,8 @@ public class Exceptions implements Demo {
         } catch(TooBigCount | ExtremelyBigCount exc) {
             log("Repeated Exception: " + exc.getMessage());
         } catch(IllegalArgumentException exc){
-            log("Repeated Exception: " + exc.getMessage());
+            print("Stack Trace of exception:");
+            exc.printStackTrace();
         }
     }
 

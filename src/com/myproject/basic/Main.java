@@ -54,11 +54,14 @@ public class Main {
         // Annotations
         test(new AnnotationsDemo());
 
+        // Strings
+        test(new StringDemo());
+
         // Input-Output Streams
         test(new IOStreamDemo());
 
         // Threads
-//        test(new ThreadDemo());
+        test(new ThreadDemo());
 
 
     }
